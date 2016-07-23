@@ -1,0 +1,37 @@
+// Font families
+$main-font-family: 'Noto Sans';
+$titles-font-family: $main-font-family;
+$body-font-family: $main-font-family;
+
+//Bootstrap
+$body-bg:#dff0d8 !default;
+$link-color:pink !default;
+
+// Font sizes:
+$font-size-base: 14px;
+$font-size-small: $font-size-base - 3px;
+$font-size-large: $font-size-base + 6px;
+$font-size-h1: $font-size-base + 15px;
+$font-size-h2: $font-size-base + 12px;
+$font-size-h3: $font-size-base + 9px;
+$font-size-h4: $font-size-base + 6px;
+$font-size-h5: $font-size-base + 3px;
+$font-size-h6: $font-size-base;
+
+// Base colors
+$color-white: #fff;
+$color-black: #333;
+$color-grey: #EBEDEA;
+$color-sky-blue: #3899A6;
+$color-ken-is-my-paradise: #A53DFF;
+$color-virgin-shrimp: #FF6F59;
+$color-life-aquatic: #6FE8D2;
+$color-beauty-queen-drea: #FF596D;
+
+// Components colors
+$main-text-color: $color-black;
+$body-background-color: $color-white;
+
+// Responsive variables
+$tablet-width: 737px;
+$phone-width: $tablet-width - 1px;

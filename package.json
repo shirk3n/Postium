@@ -9,6 +9,14 @@
   "author": "Juan Delgado",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "^3.3.6",
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
   }
 }
