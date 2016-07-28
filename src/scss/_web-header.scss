@@ -1,0 +1,52 @@
+$web-header-background: $color-life-aquatic;
+$web-navbar-background: $color-white;
+
+.web-header{
+	background: $web-header-background;
+	
+}
+
+.glyphicon{
+	margin-top: 10px;
+	float: right;
+}
+.container-web-header [class*="col-xs-11"]{ //Quitar padding de un grid
+	padding-right:0;
+}
+
+.navbar{
+	margin-bottom: 0px;
+	background: $web-navbar-background;
+	
+}
+
+.navbar-item{
+	height: 40px;
+	text-align:center;
+
+}
+
+.login-register-button{
+	margin-top: 18px;
+	float: right;
+	text-align: center;
+}
+
+.navabar-categories{
+	overflow-x:auto;
+	white-space: nowrap; //Para que salga horizontal todo
+}	
+
+//Scroll horizontal
+.navbar-item{
+	display: inline-block;
+	float: none;
+	padding-top: 1.5%;
+	
+}
+.navbar-item{
+	a{
+		color: black;
+	}	
+}
+
