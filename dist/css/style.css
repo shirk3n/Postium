@@ -6359,6 +6359,7 @@ button.close {
   text-align: center; }
 
 .navabar-categories {
+  overflow-x: auto;
   white-space: nowrap; }
 
 .navbar-item {

@@ -1,6 +1,7 @@
 $web-header-background: $color-life-aquatic;
 $web-navbar-background: $color-white;
 
+
 .web-header{
 	background: $web-header-background;
 	
@@ -33,7 +34,7 @@ $web-navbar-background: $color-white;
 }
 
 .navabar-categories{
-	//overflow-x:auto;
+	overflow-x:auto;
 	white-space: nowrap; //Para que salga horizontal todo
 }	
 
