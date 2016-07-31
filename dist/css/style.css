@@ -6359,7 +6359,6 @@ button.close {
   text-align: center; }
 
 .navabar-categories {
-  overflow-x: auto;
   white-space: nowrap; }
 
 .navbar-item {
@@ -6382,8 +6381,6 @@ button.close {
   padding: 10px; }
   .article-item img {
     width: 100%; }
-  .article-item video {
-    max-width: 100%; }
   .article-item .photo-profile {
     margin-top: 5px;
     width: 50px;
