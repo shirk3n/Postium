@@ -7,6 +7,11 @@ var browserify = require('browserify');
 var tap = require('gulp-tap');
 var buffer = require('gulp-buffer');
 
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
+var postcss = require('gulp-postcss')
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
 
 
 //------------------------
@@ -110,7 +115,13 @@ gulp.task("default", function(){
 
 gulp.task("compile-sass", function(){
     gulp.src("./src/scss/style.scss") // cargamos le archivo
+    .pipe(sourcemaps.init()) // comenzamos la captura de sourcemaps
     .pipe(sass().on('error', sass.logError)) // compilamos el archivo SASS
+    .pipe(postcss([
+        autoprefixer(), // autoprefija automáticamente el CSS
+        cssnano() // minifica el CSS
+    ]))
+    .pipe(sourcemaps.write('./')) // escribimos los sourcemaps
     .pipe(gulp.dest("./dist/css/")) // guardamos el archivo en dist/css
     .pipe(notify({
         title: "SASS",
@@ -122,10 +133,13 @@ gulp.task("compile-sass", function(){
 // definimos la tarea para concatenar JS
 gulp.task("concat-js", function(){
     gulp.src("src/js/app.js")
+    .pipe(sourcemaps.init()) // comenzamos la captura de sourcemaps
     .pipe(tap(function(file){ // tap nos permite ejecutar un código por cada fichero seleccionado en el paso anterior
-        file.contents = browserify(file.path, {debug:true}).bundle(); // pasamos el archivo por browserify para importar los require
+        file.contents = browserify(file.path).bundle(); // pasamos el archivo por browserify para importar los require
     }))
     .pipe(buffer()) // convertir cada archivo en un stream
+    .pipe(uglify()) // minifica el javascript
+    .pipe(sourcemaps.write('./')) // escribimos los sourcemaps
     .pipe(gulp.dest("dist/js/"))
     .pipe(notify({
         title: "JS",
