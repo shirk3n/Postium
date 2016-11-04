@@ -53,6 +53,9 @@ body {
   font-family: "Noto Sans";
   font-size: 14px; }
 
+a:visited, a:hover {
+  color: black !important; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -6375,34 +6378,78 @@ button.close {
   color: white;
   text-align: center; }
 
+.overflow-horizontal {
+  overflow-x: hidden; }
+
+.thumbnail {
+  margin-bottom: 20px;
+  padding-bottom: 24px;
+  border-bottom-width: 0px; }
+
 .main {
   margin-top: 20px; }
 
-.article-item {
-  padding: 10px; }
-  .article-item img {
-    width: 100%; }
-  .article-item .photo-profile {
-    margin-top: 5px;
-    width: 50px;
-    border: 2px solid;
-    border-radius: 25px;
-    display: inline-block; }
-  .article-item .author-name {
-    display: inline-block;
-    padding-left: 5px; }
-  .article-item .buttom-love {
-    width: 20px;
-    margin-top: 2%;
-    margin-left: 40%; }
+.article-item .photo-profile img {
+  margin-top: 5px;
+  width: 50px;
+  border: 2px solid;
+  border-radius: 25px;
+  display: inline-block; }
+
+.article-item .author-name {
+  display: inline-block;
+  padding-left: 10%; }
+
+.article-item .buttom-love {
+  margin-top: 5%;
+  width: 20px;
+  margin-left: 50%; }
 
 .article-item:hover {
   cursor: pointer;
   text-shadow: 1px 1px 0px #9da698;
   background: rgba(235, 237, 234, 0.9); }
 
+.article-item img {
+  width: 100%; }
+
+.article-item .photo-article {
+  border-top-width: 0px;
+  margin-top: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px; }
+  .article-item .photo-article img {
+    width: 100%; }
+
+.main-article {
+  padding: 10px; }
+  .main-article img {
+    width: 100%; }
+  .main-article .photo-profile {
+    margin-top: 3px;
+    width: 40px;
+    border: 2px solid;
+    border-radius: 25px;
+    display: inline-block; }
+  .main-article .author-name {
+    display: inline-block;
+    padding-left: 5px; }
+  .main-article .buttom-love {
+    width: 20px;
+    margin-top: 2%;
+    margin-left: 40%; }
+  .main-article:hover {
+    cursor: pointer; }
+
 .page-navigation {
   margin-left: 40%; }
+
+.cut-words {
+  padding: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
 
 /*!
 Animate.css - http://daneden.me/animate

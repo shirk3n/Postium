@@ -1,9 +1,62 @@
 $web-shadow-background: $color-grey;
-
+.overflow-horizontal{
+	overflow-x: hidden;
+}
+.thumbnail{
+	margin-bottom: 20px;
+    padding-bottom: 24px;
+    border-bottom-width: 0px;
+}
 .main{
 	margin-top: 20px;
 }
+
 .article-item{
+	.photo-profile{
+		img{
+		margin-top: 5px;
+		width: 50px;
+		border: 2px solid;
+		border-radius: 25px;
+		display: inline-block;
+		}
+	}
+
+	.author-name{
+		display: inline-block;
+		padding-left: 10%;
+	}
+	.buttom-love{
+		margin-top: 5%;
+		width: 20px;
+		margin-left: 50%;
+	}
+	&:hover{
+		cursor: pointer;
+		text-shadow: 1px 1px 0px darken($web-shadow-background, 30%);
+		background: fade-out($web-shadow-background, 0.1);
+	}
+	img{
+		width: 100%;
+	}	
+
+.photo-article{
+	border-top-width: 0px;
+    margin-top: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+		img{
+		width: 100%;
+	}
+	video{
+		//max-width: 100%;
+	}
+}
+}
+
+//----------ARTICLES-------------------
+.main-article{
 	padding: 10px;
 	img{
 		width: 100%;
@@ -13,8 +66,8 @@ $web-shadow-background: $color-grey;
 	}
 	
 	.photo-profile{
-		margin-top: 5px;
-		width: 50px;
+		margin-top: 3px;
+		width: 40px;
 		border: 2px solid;
 		border-radius: 25px;
 		display: inline-block;
@@ -28,13 +81,18 @@ $web-shadow-background: $color-grey;
 		margin-top: 2%;
 		margin-left: 40%;
 	}
-}
-.article-item:hover{
-	cursor: pointer;
-	text-shadow: 1px 1px 0px darken($web-shadow-background, 30%);
-	background: fade-out($web-shadow-background, 0.1);
+	&:hover{
+		cursor: pointer;
+	}
 }
 
 .page-navigation{
 	margin-left: 40%;
+}
+
+.cut-words{
+	padding:20px;
+	text-overflow:ellipsis;
+	white-space:nowrap; 
+	overflow:hidden; 
 }
