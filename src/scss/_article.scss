@@ -2,3 +2,42 @@
 // 	width: 100vw;
 // 	height: 100vh;
 // }
+.article-item-detail{
+	.photo-profile{
+		img{
+		margin-top: 5px;
+		width: 50px;
+		border: 2px solid;
+		border-radius: 25px;
+		display: inline-block;
+		}
+	}
+
+	.author-name{
+		display: inline-block;
+		padding-left: 3%;
+		padding-top: 2.5%;	
+	}
+	.buttom-love{
+		margin-top: 5%;
+		width: 20px;
+		margin-left: 46%;
+	}
+	img{
+		width: 100%;
+	}	
+
+.photo-article{
+	border-top-width: 0px;
+    margin-top: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+		img{
+		width: 100%;
+	}
+	video{
+		//max-width: 100%;
+	}
+}
+}

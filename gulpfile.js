@@ -41,8 +41,6 @@ gulp.task("default", ["concat-js", "compile-sass"], function(){
     gulp.watch("*.js").on("change", browserSync.reload);
 
 });
-
-
 // source and distribution folder
 var
     source = 'src/',
@@ -108,7 +106,7 @@ gulp.task("default", function(){
 	gulp.watch("./src/scss/*.scss", ["sass"]); 
     gulp.watch("./src/scss/*.scss").on("change", browserSync.reload); 
 	//Observa cambios en HTML y recarga el navegador
-	gulp.watch("./*.html").on("change", browserSync.reload); 
+	gulp.watch("./*.html").on("change", browserSync.reload);
 
 });
 //definimos tarea gulp-sass para compilar sass

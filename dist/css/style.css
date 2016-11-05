@@ -6403,7 +6403,7 @@ button.close {
 .article-item .buttom-love {
   margin-top: 5%;
   width: 20px;
-  margin-left: 50%; }
+  margin-left: 46%; }
 
 .article-item:hover {
   cursor: pointer;
@@ -6450,6 +6450,35 @@ button.close {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden; }
+
+.article-item-detail .photo-profile img {
+  margin-top: 5px;
+  width: 50px;
+  border: 2px solid;
+  border-radius: 25px;
+  display: inline-block; }
+
+.article-item-detail .author-name {
+  display: inline-block;
+  padding-left: 3%;
+  padding-top: 2.5%; }
+
+.article-item-detail .buttom-love {
+  margin-top: 5%;
+  width: 20px;
+  margin-left: 46%; }
+
+.article-item-detail img {
+  width: 100%; }
+
+.article-item-detail .photo-article {
+  border-top-width: 0px;
+  margin-top: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px; }
+  .article-item-detail .photo-article img {
+    width: 100%; }
 
 /*!
 Animate.css - http://daneden.me/animate
