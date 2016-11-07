@@ -13,6 +13,8 @@ var postcss = require('gulp-postcss')
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 
+concat = require("gulp-concat");
+
 
 //------------------------
 
@@ -130,7 +132,7 @@ gulp.task("compile-sass", function(){
 
 // definimos la tarea para concatenar JS
 gulp.task("concat-js", function(){
-    gulp.src("src/js/app.js")
+    gulp.src("./src/js/app.js")
     .pipe(sourcemaps.init()) // comenzamos la captura de sourcemaps
     .pipe(tap(function(file){ // tap nos permite ejecutar un código por cada fichero seleccionado en el paso anterior
         file.contents = browserify(file.path).bundle(); // pasamos el archivo por browserify para importar los require
@@ -138,7 +140,7 @@ gulp.task("concat-js", function(){
     .pipe(buffer()) // convertir cada archivo en un stream
     .pipe(uglify()) // minifica el javascript
     .pipe(sourcemaps.write('./')) // escribimos los sourcemaps
-    .pipe(gulp.dest("dist/js/"))
+    .pipe(gulp.dest("./dist/js/"))
     .pipe(notify({
         title: "JS",
         message: "Concatenated 🤘"
