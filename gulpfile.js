@@ -13,13 +13,14 @@ var postcss = require('gulp-postcss')
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 
-concat = require("gulp-concat");
+var concat = require("gulp-concat");
 
 
 //------------------------
 
 // variables de patrones de archivos
 var jsFiles = ["src/js/*.js", "src/js/**/*.js"];
+
 
 // definimos tarea por defecto
 gulp.task("default", ["concat-js", "compile-sass"], function(){
@@ -132,14 +133,15 @@ gulp.task("compile-sass", function(){
 
 // definimos la tarea para concatenar JS
 gulp.task("concat-js", function(){
-    gulp.src("./src/js/app.js")
-    .pipe(sourcemaps.init()) // comenzamos la captura de sourcemaps
-    .pipe(tap(function(file){ // tap nos permite ejecutar un código por cada fichero seleccionado en el paso anterior
-        file.contents = browserify(file.path).bundle(); // pasamos el archivo por browserify para importar los require
-    }))
-    .pipe(buffer()) // convertir cada archivo en un stream
-    .pipe(uglify()) // minifica el javascript
-    .pipe(sourcemaps.write('./')) // escribimos los sourcemaps
+    gulp.src(jsFiles)
+    //.pipe(sourcemaps.init()) // comenzamos la captura de sourcemaps
+    //.pipe(tap(function(file){ // tap nos permite ejecutar un código por cada fichero seleccionado en el paso anterior
+    //    file.contents = browserify(file.path).bundle(); // pasamos el archivo por browserify para importar los require
+    //}))
+    //.pipe(buffer()) // convertir cada archivo en un stream
+    //.pipe(uglify()) // minifica el javascript
+    //.pipe(sourcemaps.write('./')) // escribimos los sourcemaps
+    .pipe(concat("app.js"))
     .pipe(gulp.dest("./dist/js/"))
     .pipe(notify({
         title: "JS",
