@@ -7,11 +7,29 @@ $web-navbar-background: $color-white;
 	background: $web-header-background;
 	
 }
+//Search input
 
-.glyphicon{
-	margin-top: 10px;
-	float: right;
+.SearchIcon{
+    color:#fff;
+   
 }
+.SearchButton{
+    background-color:#ED1C24;
+    border-radius:1px;
+}
+.SearchButton:hover{
+    background-color:#C4161C;
+}
+
+.search-item{
+	margin-top: 18px;
+	text-align: center;
+}
+
+// .glyphicon{
+// 	margin-top: 10px;
+// 	float: right;
+// }
 .container-web-header [class*="col-xs-11"]{ //Quitar padding de un grid
 	padding-right:0;
 }
@@ -51,4 +69,5 @@ $web-navbar-background: $color-white;
 		color: black;
 	}	
 }
+
 
